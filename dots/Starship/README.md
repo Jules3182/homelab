@@ -4,7 +4,7 @@ These are some premade starship.rs set ups I've made for some of the machines I 
 
 ### Set up:
 
-Set up is easy! First install starship.rs *(check [this]() site for updated instruction)*, then you just have to take one of the config files from this folder, and copy it to ~/config/starship.toml
+Set up is easy! First install starship.rs *(check [this](https://starship.rs/guide/) site for updated instruction)*, then you just have to take one of the config files from this folder, and copy it to ~/config/starship.toml
 
 This can be streamlined with `scp`, for example:
 

@@ -1,0 +1,48 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[┌─](fg:#60AF27)\
+[](fg:#60AF27)\
+$hostname\
+[ ](bg:#60AF27 fg:#844F2A)\
+[󰍳](bg:#844F2A fg:#60AF27)\
+[](bg:#60AF27 fg:#844F2A)\
+$directory\
+[](fg:#60AF27 bg:#9F5C32)\
+$git_branch\
+$git_status\
+[  󰣀  ](fg:#AAAAAA bg:#9F5C32)\
+[](fg:#9F5C32 bg:#61381f)\
+$nodejs\
+$rust\
+$golang\
+$php\
+[](fg:#61381f bg:#361F11)\
+$time\
+[ ](fg:#361F11)\
+\n[└───>](fg:#60AF27)$character"""
+
+[hostname]
+style = "bg:#60AF27"
+format = '[[ $hostname](fg:#555555 bg:#60AF27)]($style)'
+
+[character]
+success_symbol = '[](bold green)'
+
+[directory]
+style = "fg:#555555 bg:#60AF27"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#361F11"
+format = '[[  $time ](fg:#AA99A5 bg:#361F11)]($style)'
